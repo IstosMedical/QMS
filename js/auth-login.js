@@ -160,7 +160,7 @@ if (form && identifierEl && passwordEl) {
         if (user) {
           console.log("Firebase user logged in:", user.uid);
           unsubscribe();
-          window.location.replace("https://qms.istosmedical.com");
+          window.location.replace("https://istosmedical.github.io/QMS/index.html");
         } else {
           setError("Login failed to persist. Please try again.");
         }

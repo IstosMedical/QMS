@@ -95,7 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!user) {
       console.log("Auth state: signed out");
       setTimeout(() => {
-        if (!auth.currentUser) window.location.href = "/login.html";
+        if (!auth.currentUser)
+    window.location.href = "../login.html";
       }, 1000);
     } else {
       console.log("Auth state: logged in", user.uid);
@@ -109,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         await signOut(auth);
         localStorage.removeItem("qmsCurrentUser");
-        window.location.href = "/login.html";
+        window.location.href = "../login.html";
       } catch (err) {
         console.error("Logout failed:", err);
         alert("Could not log out. Please try again.");
@@ -136,7 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
   onAuthStateChanged(auth, (user) => {
     if (!user) {
       setTimeout(() => {
-        if (!auth.currentUser) window.location.href = "/login.html";
+        if (!auth.currentUser)
+    window.location.href = "../login.html";
       }, 1000);
       return;
     }
@@ -240,7 +242,8 @@ document.addEventListener("DOMContentLoaded", () => {
   onAuthStateChanged(auth, (user) => {
     if (!user) {
       setTimeout(() => {
-        if (!auth.currentUser) window.location.href = "/login.html";
+        if (!auth.currentUser)
+    window.location.href = "../login.html";
       }, 1000);
       return;
     }
